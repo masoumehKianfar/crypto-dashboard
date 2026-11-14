@@ -1,43 +1,53 @@
 const DarkColors = {
-  background: "#07111f",
-  foreground: "#e8eef8",
-  card: "#0d1a2c",
-  cardForeground: "#e8eef8",
-  popover: "#0d1a2c",
-  popoverForeground: "#e8eef8",
-  primary: "#22c55e",
-  primaryForeground: "#052e16",
-  secondary: "#13233a",
-  secondaryForeground: "#e8eef8",
-  muted: "#13233a",
-  mutedForeground: "#93a4bf",
-  accent: "#16304c",
-  accentForeground: "#e8eef8",
-  destructive: "#f43f5e",
-  border: "#1e334f",
-  input: "#1e334f",
-  ring: "#22c55e",
+  white: "#ffffff",
+  black: "#000000",
+
+  primary: {
+    lighter: "#1e334f",
+    light: "#16304c",
+    dark: "#13233a",
+  },
+
+  gray: {
+    lighter: "#e8eef8",
+    light: "#93a4bf",
+    dark: "#0d1a2c",
+    darker: "#07111f",
+  },
+
+  success: {
+    light: "#22c55e",
+    dark: "#052e16",
+  },
+
+  error: {
+    light: "#f43f5e",
+  },
 };
 
 const LightColors = {
-  background: "#f4f7fb",
-  foreground: "#0b1220",
-  card: "#ffffff",
-  cardForeground: "#0b1220",
-  popover: "#ffffff",
-  popoverForeground: "#0b1220",
-  primary: "#0f9f6e",
-  primaryForeground: "#f4fffa",
-  secondary: "#e8eef7",
-  secondaryForeground: "#0b1220",
-  muted: "#e8eef7",
-  mutedForeground: "#5b6780",
-  accent: "#e8eef7",
-  accentForeground: "#0b1220",
-  destructive: "#dc2626",
-  border: "#d7e0ee",
-  input: "#d7e0ee",
-  ring: "#0f9f6e",
+  white: "#ffffff",
+  black: "#000000",
+
+  primary: {
+    light: "#5b6780",
+    dark: "#0b1220",
+  },
+
+  gray: {
+    lighter: "#f4fffa",
+    light: "#f4f7fb",
+    dark: "#e8eef7",
+    darker: "#d7e0ee",
+  },
+
+  success: {
+    light: "#0f9f6e",
+  },
+
+  error: {
+    light: "#dc2626",
+  },
 };
 
 export { DarkColors, LightColors };

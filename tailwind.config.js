@@ -1,5 +1,5 @@
-import { LightColors } from "./src/theme/color";
-import { DarkColors } from "./src/theme/color";
+import { LightColors, DarkColors } from "./src/theme/color";
+import { FontSize } from "./src/theme/font-size";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +13,7 @@ module.exports = {
         light: LightColors,
         dark: DarkColors,
       },
+      fontSize: FontSize,
     },
 
     plugins: [],
