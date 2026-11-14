@@ -22,7 +22,7 @@ const HeaderComponent = () => {
       </div>
 
       <div className="flex items-center justify-center w-1/3">
-        <div className="w-8 h-8 flex items-center justify-center bg-slate-600 rounded-full mr-1">
+        <div className="w-8 h-8 flex items-center justify-center bg-light-primary-light rounded-full mr-1">
           A
         </div>
 
