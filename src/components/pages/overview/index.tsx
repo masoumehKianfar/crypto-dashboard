@@ -1,4 +1,4 @@
-import HeaderTitleComponent from "../../molecules/page-header";
+import TitleComponent from "../../molecules/page-header";
 import MarketTableComponent from "../../organisms/market-table";
 import TrendingCoinsComponent from "../../organisms/trending-coins";
 
@@ -6,7 +6,7 @@ const OverviewComponent = () => {
   return (
     <div className="flex flex-col justify-start items-start gap-4 mt-8 h-[500px] ml-16">
       <div className="">
-        <HeaderTitleComponent
+        <TitleComponent
           headTitle={
             "A professional crypto desk without writing a custom backend."
           }
