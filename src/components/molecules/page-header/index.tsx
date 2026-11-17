@@ -13,7 +13,7 @@ const TitleComponent = ({
 }: TitleProps) => {
   return (
     <div>
-      <p className={headTitleSize}>{headTitle}</p>
+      <p className={`mb-2 ${headTitleSize}`}>{headTitle}</p>
       <p className={paragraphSize}>{paragraph}</p>
     </div>
   );
