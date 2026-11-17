@@ -8,8 +8,8 @@ const HeaderComponent = () => {
   const pathname = usePathname();
 
   return (
-    <div className="sticky top-0 z-50 flex justify-between items-center h-[80px] px-24 backdrop-blur-xl shadow-md dark:shadow-white/10">
-      <div className="flex items-center justify-start gap-4 w-1/3">
+    <div className="w-full sticky top-0 z-50 flex justify-between items-center h-[80px] lg:px-24 px-4 backdrop-blur-xl shadow-md dark:shadow-white/10">
+      <div className="lg:flex items-center justify-start  w-1/3 hidden">
         {headerRoots.map((item) => (
           <NavLinksComponent
             href={item.href}
@@ -19,6 +19,10 @@ const HeaderComponent = () => {
             {item.title}
           </NavLinksComponent>
         ))}
+      </div>
+
+      <div className="flex lg:hidden items-center justify-start w-1/3">
+        menu
       </div>
 
       <div className="flex items-center justify-center w-1/3">
