@@ -5,14 +5,14 @@ import { PropsWithChildren } from "react";
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <div className=" min-h-screen flex flex-col">
+    <div className="h-screen">
       <HeaderComponent />
 
       <MarketTickerComponent />
 
-      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8">
+      <div className="w-full px-2 lg:px-[100px] flex-1 pt-8 pb-2">
         {children}
-      </main>
+      </div>
 
       <FooterComponent />
     </div>
