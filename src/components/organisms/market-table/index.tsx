@@ -7,6 +7,8 @@ import { compactUsdFormat } from "@/src/utils/compact-usd-format";
 import ResponsiveContainerchartComponent from "../../molecules/charts/responsive-container-chart";
 import { isPositiveChange } from "@/src/utils/is-positive-change";
 import { CoinMarket } from "@/src/types/global-type";
+import { useState } from "react";
+import SearchComponent from "../../molecules/search";
 
 const MarketTableComponent = ({ page = 1, perPage = 12 }) => {
   const { data } = useQuery({
@@ -18,15 +20,28 @@ const MarketTableComponent = ({ page = 1, perPage = 12 }) => {
       }),
   });
 
+  const [value, setValue] = useState("");
+
+  const filteredCoins = data?.filter(
+    (item: CoinMarket) =>
+      item.name.toLowerCase().includes(value.toLowerCase()) ?? [],
+  );
+
+  const searchHandler = (searchInputValue: string) => {
+    setValue(searchInputValue);
+  };
+
   return (
     <div className="dark:bg-dark-gray-dark w-full p-4 border border-light-primary-light rounded-lg">
       <p className="mb-4 text-light-primary-dark dark:text-dark-gray-lighter text-subtitle">
         Top markets
       </p>
 
-      <input
-        className="mb-6 w-1/3 border dark:border-dark-primary-lighter border-light-primary-light rounded-lg h-[32px] px-2 py-4 text-sm dark:bg-dark-gray-darker  "
-        placeholder="search markets..."
+      <SearchComponent
+        searchInputValue={value}
+        onSearch={searchHandler}
+        placeHolder="search markets..."
+        inputClassName="mb-6 w-1/3 border dark:border-dark-primary-lighter border-light-primary-light rounded-lg h-[32px] px-2 py-4 text-sm dark:bg-dark-gray-darker  "
       />
 
       <div className="rounded-lg border border-light-primary-light/50">
@@ -45,7 +60,7 @@ const MarketTableComponent = ({ page = 1, perPage = 12 }) => {
           </thead>
 
           <tbody>
-            {data?.map((item: CoinMarket) => (
+            {filteredCoins?.map((item: CoinMarket) => (
               <tr
                 key={item.id}
                 className="border-y border-b-0 border-light-primary-light/50"
