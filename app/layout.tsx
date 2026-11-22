@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "@/src/styles/globals.css";
 import ReactQuery from "@/src/providers/react-query";
+import "@/src/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} `}>
-      <body className="bg-light-gray-light text-light-primary-dark dark:bg-dark-gray-darker dark:text-dark-gray-lighter dark:grid-bg">
+      <body className="bg-light-gray-light text-light-primary-dark dark:bg-dark-gray-darker dark:text-dark-gray-lighter dark:grid-bg overflow-hidden">
         <ReactQuery>{children}</ReactQuery>
       </body>
     </html>
