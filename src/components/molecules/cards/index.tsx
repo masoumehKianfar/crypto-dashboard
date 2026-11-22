@@ -13,7 +13,7 @@ const CardsComponent = () => {
   });
 
   return (
-    <div className="flex lg:flex-row flex-col w-full">
+    <div className="flex lg:flex-row flex-col gap-4">
       <CardInfo
         title="Market cap"
         value={compactUsdFormat({ value: data?.data?.total_market_cap?.usd })}
