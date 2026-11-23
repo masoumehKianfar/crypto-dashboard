@@ -3,7 +3,7 @@ import { FontSize } from "./src/theme/font-size";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  darkMode: ["class"],
 
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
 
@@ -15,7 +15,6 @@ module.exports = {
       },
       fontSize: FontSize,
     },
-
-    plugins: [],
   },
+  plugins: [require("tailwindcss-animate")],
 };
