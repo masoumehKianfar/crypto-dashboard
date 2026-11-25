@@ -1,8 +1,10 @@
+import { Input } from "@/shadcn/components/ui/input";
+
 interface SearchComponentProps {
   searchInputValue: string;
   onSearch: (searchInputValue: string) => void;
   placeHolder: string;
-  inputClassName: string;
+  inputClassName?: string;
 }
 
 const SearchComponent = ({
@@ -13,7 +15,7 @@ const SearchComponent = ({
 }: SearchComponentProps) => {
   return (
     <div>
-      <input
+      <Input
         value={searchInputValue}
         onChange={(e) => onSearch(e.target.value)}
         placeholder={`${placeHolder}`}
