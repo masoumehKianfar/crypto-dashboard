@@ -5,7 +5,11 @@ import { FontSize } from "./src/theme/font-size";
 module.exports = {
   darkMode: ["class"],
 
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./shadcn/**/*.{ts,tsx}",
+  ],
 
   theme: {
     extend: {
